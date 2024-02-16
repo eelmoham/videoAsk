@@ -1,10 +1,12 @@
 import Image from "next/image";
 import NavBar from "./(components)/navbar/nav";
+import Section from "./(components)/section/section";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between container m-auto py-3 px-2 relative">
+    <main className="flex min-h-screen flex-col items-center container m-auto py-3 px-2 relative">
       <NavBar />
+      <Section />
     </main>
   );
 }
