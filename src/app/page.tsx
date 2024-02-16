@@ -4,8 +4,7 @@ import Section from "./(components)/section/section";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center container m-auto py-3 px-2 relative">
-      <NavBar />
+    <main className="">
       <Section />
     </main>
   );

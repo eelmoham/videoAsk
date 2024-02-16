@@ -4,7 +4,7 @@ import SideBar from "./sidebar"
 
 const NavBar = () => {
     return (
-        <div className=" w-full flex justify-between sticky top-0 items-center select-none">
+        <div className=" w-full flex justify-between sticky top-0 items-center select-none bg-[#ffffff] px-1 py-2 z-50">
             <div className="flex justify-center items-center gap-1 cursor-pointer hover:opacity-50">
                 <Image src="/icons/videoPlay.svg" alt="circle icon for play video" width={37} height={37} priority />
                 <span className=" text-xl font-bold">Ask</span>
