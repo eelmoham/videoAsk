@@ -1,14 +1,11 @@
-// routes/authRoutes.js
-const express = require('express');
+// controllers/authController.js
 const passport = require('passport');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
 const { secret } = require('../config/secret');
 const User = require('../models/user');
 
-const router = express.Router();
-
-router.post('/register', async (req, res) => {
+exports.registerUser = async (req, res) => {
   try {
     const { email, password } = req.body;
     const existingUser = await User.findOne({ email });
@@ -21,11 +18,19 @@ router.post('/register', async (req, res) => {
   } catch (err) {
     res.status(500).json({ message: err.message });
   }
-});
+};
 
-router.post('/login', passport.authenticate('local', { session: false }), (req, res) => {
-  const token = jwt.sign({ id: req.user._id }, secret);
-  res.status(200).json({ token });
-});
-
-module.exports = router;
+exports.loginUser = (req, res, next) => {
+  passport.authenticate('local', { session: false }, (err, user) => {
+    if (err || !user) {
+      return res.status(401).json({ message: 'Authentication failed' });
+    }
+    req.login(user, { session: false }, (err) => {
+      if (err) {
+        res.send(err);
+      }
+      const token = jwt.sign({ id: user._id }, secret);
+      return res.status(200).json({ token });
+    });
+  })(req, res, next);
+};
