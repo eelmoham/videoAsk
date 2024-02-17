@@ -4,8 +4,44 @@ import Section from "./(components)/section/section";
 
 export default function Home() {
   return (
-    <main className="">
+    <main className="flex flex-col gap-1">
       <Section />
+      {/* infos */}
+      <h1 className=" w-full text-center font-light opacity-45"> +10k bla bla bla bla ...</h1>
+      <div className=" flex flex-col gap-2 px-2 py-1 w-full md:h-screen justify-center items-center">
+        <div className=" md:flex w-full">
+          <div className=" flex flex-col justify-center items-center md:w-1/3 gap-2">
+            <Image
+              className="rounded-lg shadow-lg w-60 h-64 "
+              src="/images/test.avif" alt="test" width={720} height={720} priority />
+            <h1 className=" font-semibold text-lg">More Solutions</h1>
+            <p className="w-2/3 text-center">
+              One tool, endless possibilities—use VideoAsk for research and feedback, training, and customer support.
+            </p>
+          </div>
+
+          <div className=" flex flex-col justify-center items-center md:w-1/3 gap-2">
+            <Image
+              className="rounded-lg shadow-lg w-60 h-64 "
+              src="/images/test.avif" alt="test" width={720} height={720} priority />
+            <h1 className=" font-semibold text-lg">More Solutions</h1>
+            <p className="w-2/3 text-center">
+              One tool, endless possibilities—use VideoAsk for research and feedback, training, and customer support.
+            </p>
+          </div>
+
+          <div className=" flex flex-col justify-center items-center md:w-1/3 gap-2">
+            <Image
+              className="rounded-lg shadow-lg w-60 h-64 "
+              src="/images/test.avif" alt="test" width={720} height={720} priority />
+            <h1 className=" font-semibold text-lg">More Solutions</h1>
+            <p className="w-2/3 text-center">
+              One tool, endless possibilities—use VideoAsk for research and feedback, training, and customer support.
+            </p>
+          </div>
+
+        </div>
+      </div>
     </main>
   );
 }
