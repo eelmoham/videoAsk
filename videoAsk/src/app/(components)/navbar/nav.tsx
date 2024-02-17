@@ -13,8 +13,8 @@ const NavBar = () => {
                 <Pages />
             </div>
             <div className=" flex gap-3">
-                <div className="px-2 py-3 rounded-3xl bg-[#dedede] w-20 justify-center items-center text-[#000] font-medium hover:opacity-40 cursor-pointer hidden md:flex">Login</div>
-                <div className="px-2 py-3 rounded-3xl bg-black w-20 justify-center items-center text-[#fff] font-medium hover:opacity-40 cursor-pointer">Sign up</div>
+                <div className=" px-2 py-3 rounded-3xl bg-[#dedede] w-20 justify-center items-center text-[#000] font-medium hover:opacity-40 cursor-pointer hidden md:flex">Login</div>
+                <div className=" flex px-2 py-3 rounded-3xl bg-black w-20 justify-center items-center text-[#fff] font-medium hover:opacity-40 cursor-pointer">Sign up</div>
                 <SideBar />
             </div>
         </div>

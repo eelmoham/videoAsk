@@ -1,10 +1,17 @@
 'use client';
 
 import Image from 'next/image';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const SideBar = () => {
   const [open, setOpen] = useState(false);
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+  }, [open]);
   return (
     <div className={`rounded-full ${!open ? 'bg-[#dedede]' : 'bg-[#7d00fe]'} p-2 justify-center items-center text-[#000] font-medium  cursor-pointer flex md:hidden w-11 h-11`}>
       <div>
@@ -19,7 +26,7 @@ const SideBar = () => {
       </div>
       {
         open && (
-          <div className=' absolute top-[5rem] right-0 bottom-0 w-full h-screen bg-white z-50 animate-fade-up animate-once animate-ease-in-out'>
+          <div className=' absolute top-[5rem] right-0 bottom-0 w-full h-screen bg-white z-50 animate-fade-up animate-once animate-ease-in-out text-3xl font-light'>
             <div className="px-2 py-3 cursor-pointer font-semibold text-[#000] hover:opacity-35 animate-fade-right animate-once animate-ease-linear">Product</div>
             <div className="px-2 py-3 cursor-pointer font-semibold text-[#000] hover:opacity-35 animate-fade-right animate-once animate-ease-linear">Solutions</div>
             <div className="px-2 py-3 cursor-pointer font-semibold text-[#000] hover:opacity-35 animate-fade-right animate-once animate-ease-linear">Pricing</div>
