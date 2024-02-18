@@ -5,6 +5,7 @@ import Section from "./(components)/section/section";
 export default function Home() {
   return (
     <main className="flex flex-col gap-1">
+      <NavBar />
       <Section />
       <h1 className=" w-full text-center font-light opacity-45"> +10k bla bla bla bla ...</h1>
       <div className=" flex flex-col gap-2 px-2 py-1 w-full justify-center items-center animate-fade-up animate-ease-linear">

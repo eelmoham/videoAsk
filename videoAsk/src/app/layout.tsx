@@ -20,7 +20,6 @@ export default function RootLayout({
 
       <body className={inter.className + 'py-3 px-2'}>
         <div className="flex min-h-screen flex-col items-center relative md:container md:m-auto">
-          <NavBar />
           {children}
         </div>
       </body>
