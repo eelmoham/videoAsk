@@ -31,7 +31,7 @@ const SideBar = () => {
             <div className="px-2 py-3 cursor-pointer font-semibold text-[#000] hover:opacity-35 animate-fade-right animate-once animate-ease-linear">Product</div>
             <div className="px-2 py-3 cursor-pointer font-semibold text-[#000] hover:opacity-35 animate-fade-right animate-once animate-ease-linear">Solutions</div>
             <div className="px-2 py-3 cursor-pointer font-semibold text-[#000] hover:opacity-35 animate-fade-right animate-once animate-ease-linear">Pricing</div>
-            <div className="px-2 py-3 cursor-pointer font-semibold text-[#000] hover:opacity-35 animate-fade-right animate-once animate-ease-linear">Examples</div>
+            <Link href='/ask' className="px-2 py-3 cursor-pointer font-semibold text-[#000] hover:opacity-35 animate-fade-right animate-once animate-ease-linear">Examples</Link>
             <div className="px-2 py-3 cursor-pointer font-semibold text-[#000] hover:opacity-35 animate-fade-right animate-once animate-ease-linear">Recources</div>
             <Link href='/login' className="px-2 py-3 cursor-pointer font-semibold text-[#000] hover:opacity-35 animate-fade-right animate-once animate-ease-linear">Login</Link>
           </div>

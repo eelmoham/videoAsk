@@ -1,11 +1,7 @@
 'use client';
-import { FC, useState, useEffect } from "react";
-// import Player from "./player";
-import dynamic from 'next/dynamic';
-import { text } from "stream/consumers";
+import { useState } from "react";
 import Player from "./player";
 
-const DynamicReactPlayer = dynamic(() => import('react-player'), { ssr: false });
 interface Video {
     // id: string;
     url: string;
@@ -17,9 +13,105 @@ interface Option {
     vidio: Video | null;
 }
 
-interface AskProps {
-    // videos: Video[];
+const Ask = () => {
+    const videos: Video = {
+        url: "https://www.youtube.com/watch?v=mPymRFeTJa4",
+        options: [
+            {
+                text: "Dolly",
+                vidio: {
+                    url: "https://youtu.be/H6guS2OR_TY?si=-3mt5iZt7vSeaHxP",
+                    options: [
+                        {
+                            text: "7liwa",
+                            vidio: {
+                                url: "https://www.youtube.com/watch?v=7ZHfD4NfgHU",
+                                options: [
+                                    {
+                                        text: "relax",
+                                        vidio: {
+                                            url: "https://www.youtube.com/watch?v=oVzt0ZwIC84",
+                                            options: [
+                                                {
+                                                    text: null,
+                                                    vidio: null
+                                                },]
+                                        }
+                                    }
+                                    ,
+                                    {
+                                        text: "random",
+                                        vidio: {
+                                            url: "https://youtu.be/B4SX5FFE2XE?si=gZxq4NxgXJlZehiZ",
+                                            options: [
+                                                {
+                                                    text: "congratulations",
+                                                    vidio: {
+                                                        url: "https://youtu.be/SC4xMk98Pdc?si=TWV3bU1OLeRIpj_P",
+                                                        options: [
+                                                            {
+                                                                text: "null",
+                                                                vidio: null
+                                                            },]
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+            ,
+            {
+                text: "random",
+                vidio: {
+                    url: "https://youtu.be/B4SX5FFE2XE?si=gZxq4NxgXJlZehiZ",
+                    options: [
+                        {
+                            text: "7liwa",
+                            vidio: {
+                                url: "https://www.youtube.com/watch?v=7ZHfD4NfgHU",
+                                options: [
+                                    {
+                                        text: "null",
+                                        vidio: null
+                                    },]
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    };
+    const [url, setUrl] = useState<string>(videos.url);
+    const [optionss, setOptionss] = useState<any>(videos.options);
+
+    const nextNode = (opt: Option, url: string) => {
+        console.log("opt>>", url, opt);
+        setUrl(url);
+        setOptionss(opt);
+    }
+
+
+    return (
+        <div className=" w-full h-full flex flex-col justify-center items-center">
+            <Player url={url} options={optionss} setUrl={nextNode} />
+        </div>
+    );
 }
+
+export default Ask
+
+
+
+
+
+
+
 
 // const videoLinks = ["https://youtu.be/B4SX5FFE2XE?si=gZxq4NxgXJlZehiZ",
 //     "https://youtu.be/vnFybzZtVoQ?si=s05FnYS84z6D7Uxn",
@@ -54,74 +146,3 @@ interface AskProps {
 //     }
 //     return videos;
 // }
-const Ask: FC<AskProps> = () => {
-    // const videos: Video[] = generateRandomVideos(5, 3);
-    const videos: Video = {
-        url: "https://www.youtube.com/watch?v=mPymRFeTJa4",
-        options: [
-            {
-                text: "Dolly",
-                vidio: {
-                    url: "https://youtu.be/H6guS2OR_TY?si=-3mt5iZt7vSeaHxP",
-                    options: [
-                        {
-                            text: "7liwa",
-                            vidio: {
-                                url: "https://www.youtube.com/watch?v=7ZHfD4NfgHU",
-                                options: [
-                                    {
-                                        text: "relax",
-                                        vidio: {
-                                            url: "https://www.youtube.com/watch?v=oVzt0ZwIC84",
-                                            options: [
-                                                {
-                                                    text: null,
-                                                    vidio: null
-                                                },]
-                                        }
-                                    },]
-
-                            }
-                        }
-                    ]
-                }
-            }
-            ,
-            {
-                text: "random",
-                vidio: {
-                    url: "https://youtu.be/B4SX5FFE2XE?si=gZxq4NxgXJlZehiZ",
-                    options: [
-                        {
-                            text: "7liwa",
-                            vidio: {
-                                url: "https://www.youtube.com/watch?v=7ZHfD4NfgHU",
-                                options: [
-                                    {
-                                        text: "null",
-                                        vidio: null
-                                    },]
-                            }
-                        }
-                    ]
-                }
-            }
-        ]
-    };
-    const [url, setUrl] = useState<string>(videos.url);
-    const [options, setOptions] = useState<any>(videos.options);
-
-    const nextNode = (url:string) => {
-        setUrl(url);
-        //set next options for new url
-        const options = videos.options.find((option: Option) => option.vidio?.url === url); //search for the next options by id is pefect
-        setOptions(options?.vidio?.options || []);
-    }
-
-
-    return (
-        <Player url={url} options={options} setUrl={nextNode} />
-    );
-}
-
-export default Ask
