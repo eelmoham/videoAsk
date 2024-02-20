@@ -3,7 +3,6 @@ import { useState } from "react";
 import Player from "./player";
 
 interface Video {
-    // id: string;
     url: string;
     options: Option[];
 }
@@ -98,7 +97,7 @@ const Ask = () => {
 
 
     return (
-        <div className=" w-full h-full flex flex-col justify-center items-center">
+        <div className=" w-[90%] h-[500px] flex flex-col justify-center items-center">
             <Player url={url} options={optionss} setUrl={nextNode} />
         </div>
     );
