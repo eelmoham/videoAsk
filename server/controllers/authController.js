@@ -42,3 +42,24 @@ exports.loginUser = (req, res, next) => {
     });
   })(req, res, next);
 };
+
+//check if user is logged in
+
+
+exports.isAuthenticated = (req, res) => {
+  const token = req.cookies.jwt;
+  if (!token) {
+    return res.status(401).json({ message: 'User not authenticated' });
+  }
+  jwt.verify(token, secret, (err, user) => {
+    if (err) {
+      return res.status(401).json({ message: 'User not authenticated' });
+    }
+    res.status(200).json({ message: 'User authenticated' });
+  });
+}
+
+exports.logoutUser = (req, res) => {
+  res.clearCookie('jwt');
+  res.status(200).json({ message: 'Logout successful' });
+}
