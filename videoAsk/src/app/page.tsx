@@ -3,7 +3,7 @@ import Image from "next/image";
 import NavBar from "./(components)/navbar/nav";
 import Section from "./(components)/section/section";
 import Ask from "./(components)/ask/page";
-import Footer from "./(components)/footer";
+import Footer from "./(components)/tools/footer";
 import Link from "next/link";
 
 
@@ -64,7 +64,7 @@ export default function Home() {
         <h1 className=" text-2xl font-semibold text-purple-600 border-l-4 border-purple-600 px-2 my-2">Watch a Demo</h1>
             <Ask />
             <div className=" w-full flex justify-center items-center">
-                <Link href='/create' className=" w-max px-2 py-3 text-white bg-purple-600 rounded-full font-semibold hover:text-purple-500 hover:bg-white hover:border border-purple-500">Create videoAsk</Link>
+                <Link href='/create' className=" w-max px-2 py-3 text-white bg-purple-600 rounded-full font-semibold hover:text-purple-500 hover:bg-white hover:outline outline-purple-500">Create videoAsk</Link>
             </div>
       </div>
       <Footer />

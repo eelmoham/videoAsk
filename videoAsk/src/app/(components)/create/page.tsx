@@ -29,7 +29,7 @@ const Create = () => {
         <div className=' flex w-full h-full flex-1 flex-col justify-center items-center'>
             <h1 className=' text-3xl font-bold text-purple-500'>Coming soon</h1>
             <Link href='/'
-                className=' text-purple-500 px-3 py-2 shadow-slate-400 border-purple-500 border rounded-full hover:bg-purple-500 hover:text-white'>Go Home
+                className=' text-purple-500 px-3 py-2 shadow-slate-400 outline-purple-500 outline rounded-full hover:bg-purple-500 hover:text-white'>Go Home
             </Link>
         </div>
     );
