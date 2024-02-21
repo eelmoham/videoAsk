@@ -46,7 +46,7 @@ const SignUp = () => {
                         <span className=" text-2xl font-bold">Ask</span>
                     </div>
                     <p className=" text-2xl font-light w-full">Welcome back!</p>
-                    <h1 className=" text-2xl font-semibold w-full">Please Login ...</h1>
+                    <h1 className=" text-2xl font-semibold w-full">Please Sign up</h1>
                     <div className=" flex flex-col w-full gap-2">
                         <div className=" w-full flex relative">
                             <Input value={userName} seter={setUserName} type="username" name="username-login" id="username-login" placeholder="Username" />
@@ -57,7 +57,7 @@ const SignUp = () => {
                         <div className=" w-full flex relative">
                             <Input value={password} seter={setPassword} type="password" name="password-login" id="password-login" placeholder="Password" />
                         </div>
-                        <div className=" text-green-400 text-sm my-1"> I forgot my password </div>
+                        {/* <div className=" text-green-400 text-sm my-1"> I forgot my password </div> */}
                         {
                             error &&
                             <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative animate-fade-down animate-once animate-duration-1000 animate-delay-500 animate-ease-in-out" role="alert">

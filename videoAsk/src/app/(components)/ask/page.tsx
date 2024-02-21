@@ -97,51 +97,10 @@ const Ask = () => {
 
 
     return (
-        <div className=" w-[90%] h-[500px] flex flex-col justify-center items-center">
+        <div className=" m-auto w-[90%] h-[500px] flex flex-col justify-center items-center animate-fade-up animate-duration-[2000ms] animate-ease-out">
             <Player url={url} options={optionss} setUrl={nextNode} />
         </div>
     );
 }
 
 export default Ask
-
-
-
-
-
-
-
-
-// const videoLinks = ["https://youtu.be/B4SX5FFE2XE?si=gZxq4NxgXJlZehiZ",
-//     "https://youtu.be/vnFybzZtVoQ?si=s05FnYS84z6D7Uxn",
-//     "https://videos.ctfassets.net/7907dlxc16yt/5DgixgwMT6CFWQjl44xtHR/5ce9a2a47985f6d03b33c691523e4d92/-VideoAsk_____WebRevamp_____03-_x2_optimized.mp4",
-//     "https://youtu.be/bz_DPnBEffw?si=-O_eSQIFh0DVJqhp",
-//     "https://youtu.be/1-kC0Wg9C6k?si=9xK3Y-p38nQYH-Pt",
-//     "https://youtu.be/g8tquaFDAgI?si=sDNIvlYWFvUnNkJj",
-// ]
-
-// const generateRandomOptions = (depth: number): Option[] => {
-//     const options: Option[] = [];
-//     for (let i = 0; i < depth; i++) {
-//         options.push({
-//             text: `Option-${i}`,
-//             vidio: i < depth - 1 ? {
-//                 url: videoLinks[Math.floor(Math.random() * 5)],
-//                 options: generateRandomOptions(depth - 1)
-//             } : null
-//         });
-//     }
-//     return options;
-// }
-
-// const generateRandomVideos = (num: number, depth: number): Video[] => {
-//     const videos: Video[] = [];
-//     for (let i = 0; i < num; i++) {
-//         videos.push({
-//             url: 'https://videos.ctfassets.net/7907dlxc16yt/5DgixgwMT6CFWQjl44xtHR/5ce9a2a47985f6d03b33c691523e4d92/-VideoAsk_____WebRevamp_____03-_x2_optimized.mp4',
-//             // url: 'https://youtu.be/oZDwcrWRQxw?si=jvajGYMwABwzdJo_',
-//             options: generateRandomOptions(depth)
-//         });
-//     }
-//     return videos;
-// }

@@ -1,4 +1,9 @@
-import React from 'react';
+'use client';
+import React, { useEffect } from 'react';
+import { useContext } from "react"
+import { AuthContext } from "../tools/authContext"
+import { useRouter } from "next/navigation";
+import Link from "next/link";
 interface Video {
     url: string;
     options: Option[];
@@ -13,22 +18,19 @@ interface Option {
 
 
 const Create = () => {
+    const context = useContext(AuthContext);
+    const router = useRouter();
+    useEffect(() => {
+        if (!context?.isLoggedIn) {
+            router.push('/login');
+        }
+    }, [context]);
     return (
-        <div className="flex flex-1 flex-col w-full h-full">
-            <div className=" text-3xl w-full flex justify-center items-center">Create new project</div>
-            <div className="flex-1 flex">
-                {/* uplaod video */}
-                <div className="w-1/2 flex flex-col gap-4 items-center justify-center">
-                    <div className="w-full h-96 bg-gray-300 flex justify-center items
-                    -center">
-                        <input type="file" accept="image/*" />
-                        </div>
-                    <div className="w-full flex justify-center items-center gap-4">
-                        <input type="text" placeholder="Title" />
-                        <button className="bg-purple-600 text-white px-4 py-2 rounded-full">Upload</button>
-                    </div>
-                </div>
-            </div>
+        <div className=' flex w-full h-full flex-1 flex-col justify-center items-center'>
+            <h1 className=' text-3xl font-bold text-purple-500'>Coming soon</h1>
+            <Link href='/'
+                className=' text-purple-500 px-3 py-2 shadow-slate-400 border-purple-500 border rounded-full hover:bg-purple-500 hover:text-white'>Go Home
+            </Link>
         </div>
     );
 };

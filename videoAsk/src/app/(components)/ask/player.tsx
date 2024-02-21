@@ -20,7 +20,7 @@ interface IPlayer {
 
 const Player: FC<IPlayer> = ({ url, options , setUrl}) => {
     return (
-        <div className="flex flex-1 flex-col items-center gap-4 justify-center w-full h-full ">
+        <div className="flex flex-1 flex-col items-center gap-4 justify-center w-full h-full animate-fade-up animate-duration-[2000ms] animate-ease-out ">
             <div className=" relative w-full flex h-full justify-center items-center ">
                 <DynamicReactPlayer
                     url={url}

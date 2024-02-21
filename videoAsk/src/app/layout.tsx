@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import NavBar from "./(components)/navbar/nav";
+import { AuthProvider } from "./(components)/tools/authContext";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,7 +20,9 @@ export default function RootLayout({
 
       <body className={inter.className + 'py-3 px-2'}>
         <div className="flex min-h-screen flex-col items-center relative md:container md:m-auto">
-          {children}
+          <AuthProvider>
+            {children}
+          </AuthProvider>
         </div>
       </body>
     </html>

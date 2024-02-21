@@ -1,12 +1,16 @@
+'use client'
 import Image from "next/image";
 import NavBar from "./(components)/navbar/nav";
 import Section from "./(components)/section/section";
 import Ask from "./(components)/ask/page";
 import Footer from "./(components)/footer";
+import Link from "next/link";
+
 
 export default function Home() {
+
   return (
-    <main className="flex h-full flex-col gap-1">
+    <main className="flex h-full flex-col gap-1 container">
       <NavBar />
       <Section />
       <h1 className=" w-full text-center font-light opacity-45"> +10k bla bla bla bla ...</h1>
@@ -57,8 +61,11 @@ export default function Home() {
         <p className=" w-full md:w-1/2 text-2xl text-center">Scale your high touch communication with asynchronous, interactive video</p>
       </div>
       <div className="w-full justify-center flex flex-col gap-2 h-full">
-        <h1>Watch a Demo</h1>
-        <Ask />
+        <h1 className=" text-2xl font-semibold text-purple-600 border-l-4 border-purple-600 px-2 my-2">Watch a Demo</h1>
+            <Ask />
+            <div className=" w-full flex justify-center items-center">
+                <Link href='/create' className=" w-max px-2 py-3 text-white bg-purple-600 rounded-full font-semibold hover:text-purple-500 hover:bg-white hover:border border-purple-500">Create videoAsk</Link>
+            </div>
       </div>
       <Footer />
     </main>
