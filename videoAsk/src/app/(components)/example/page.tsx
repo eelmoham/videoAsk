@@ -17,7 +17,7 @@ const Demo = () => {
     return (
         <div className="w-full justify-center flex flex-col gap-2 h-full">
             <NavBar />
-            <h1 className=" text-2xl font-semibold text-purple-600 outline-l-4 outline-purple-600 px-2 my-2">Watch a Demo</h1>
+            <h1 className=" text-2xl font-semibold text-purple-600 border-l-4 border-purple-600 px-2 my-2 mx-1">Watch a Demo</h1>
             <Ask />
             <div className=" w-full flex justify-center items-center">
                 <Link href='/create' className=" w-max px-2 py-3 text-white bg-purple-600 rounded-full font-semibold hover:text-purple-500 hover:bg-white hover:outline outline-purple-500">Create videoAsk</Link>
