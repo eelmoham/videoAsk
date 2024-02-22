@@ -20,8 +20,7 @@ const Login = () => {
       email: email,
       password: password
     }).then((response) => {
-      if (response.status === 200)
-      {
+      if (response.status === 200) {
         context?.login()
         setLoading(false)
         router.push('/')
@@ -62,18 +61,24 @@ const Login = () => {
             </div>
             <div className=" text-green-400 text-sm my-1"> I forgot my password </div>
             <div
-             onClick={() => {
-              setLoading(true)
-              setError(false)
-              if (!email || !password) {
+              onClick={() => {
+                setLoading(true)
+                setError(false)
+                if (!email || !password) {
                   setError(true)
                   setLoading(false)
-              }
-              else
+                }
+                else
                   Login()
-          }}
+              }}
               className=" cursor-pointer w-full px-2 py-3 flex justify-center items-center text-white text-lg font-medium bg-[#7d00fe] rounded-xl my-3    relative overflow-hidden border border-indigo-600 shadow-5xl transition-all duration-200 before:absolute before:bottom-0 before:left-0 before:right-0 before:top-0 before:m-auto before:h-0 before:w-0 before:rounded-sm before:bg-[#825aa3e5] before:duration-300 before:ease-out hover:text-white hover:shadow-indigo-600 hover:before:h-full hover:before:w-full hover:before:opacity-80 max-sm:before:hidden">
               <span className=" z-50">Log in</span>
+              {
+                loading &&
+                <span className="animate-spin animate-infinite text-white">
+                  <Image src="/material/spin-load.svg" alt="circle icon for play video" width={20} height={20} priority />
+                </span>
+              }
             </div>
           </div>
         </div>

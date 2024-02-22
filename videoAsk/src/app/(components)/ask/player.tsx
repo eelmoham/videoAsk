@@ -21,7 +21,7 @@ interface IPlayer {
 const Player: FC<IPlayer> = ({ url, options , setUrl}) => {
     return (
         <div className="flex flex-1 flex-col items-center gap-4 justify-center w-full h-full animate-fade-up animate-duration-[2000ms] animate-ease-out ">
-            <div className=" relative w-full flex h-full justify-center items-center ">
+            <div className=" relative w-full flex h-full justify-center items-center">
                 <DynamicReactPlayer
                     url={url}
                     autoPlay={true}
@@ -43,8 +43,7 @@ const Player: FC<IPlayer> = ({ url, options , setUrl}) => {
                                             setUrl(option.vidio?.options, option.vidio.url)
 
                                     }}
-                                    className="w-1/3 flex justify-center px-3 py-2 rounded-full bg-inherit text-purple-600 border-purple-500 border
-                                hover:bg-purple-600 hover:text-white hover:border-transparent transition-all duration-500 ease-in-out cursor-pointer">
+                                    className="w-1/3 flex justify-center px-3 py-2 rounded-full bg-inherit hover:text-white hover:outline-purple-500 hover:outline hover:bg-[#00000059] bg-purple-600 text-white  transition-all duration-500 ease-in-out cursor-pointer">
                                     {option.text}
                                 </div>
                             )

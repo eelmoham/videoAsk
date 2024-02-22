@@ -32,7 +32,7 @@ const SideBar = () => {
       </div>
       {
         open && (
-          <div className=' absolute top-[5rem] right-0 bottom-0 w-full h-screen bg-white z-50 animate-fade-up animate-once animate-ease-in-out text-3xl font-light flex flex-col'>
+          <div className=' absolute top-[5rem] right-0 bottom-0 w-full h-screen bg-white z-50 animate-fade-up animate-once animate-ease-in-out text-2xl font-light flex flex-col'>
             <Link href='/' className="px-2 py-3 cursor-pointer font-semibold text-[#000] hover:opacity-20 animate-fade-right animate-once animate-ease-linear ">Home</Link>
             {/* <Link href='/' className="px-2 py-3 cursor-pointer font-semibold text-[#000] hover:opacity-20 animate-fade-right animate-once animate-ease-linear ">Solutions</Link>
             <Link href='/' className="px-2 py-3 cursor-pointer font-semibold text-[#000] hover:opacity-20 animate-fade-right animate-once animate-ease-linear ">Pricing</Link> */}

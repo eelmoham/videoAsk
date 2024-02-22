@@ -97,7 +97,7 @@ const Ask = () => {
 
 
     return (
-        <div className=" m-auto w-[90%] h-[500px] flex flex-col justify-center items-center animate-fade-up animate-duration-[2000ms] animate-ease-out">
+        <div className=" m-auto w-[90%] h-[500px] flex flex-col justify-center items-center animate-fade-up animate-duration-[2000ms] animate-ease-out rounded-xl">
             <Player url={url} options={optionss} setUrl={nextNode} />
         </div>
     );
