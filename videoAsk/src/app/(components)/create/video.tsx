@@ -19,11 +19,12 @@ const Video = () => {
             const file = fileInputRef.current.files[0];
             formData.append('file', file);
         }
-        
+
     };
     return (
         <div className=" flex flex-col w-max">
-            <input onChange={uploadVideo}  ref={fileInputRef} type="file" accept="video/*" />
+            <input onChange={uploadVideo} ref={fileInputRef} type="file" accept="video/*" />
+            
             <div className=" w-full h-[100px] overflow-auto">
                 {
                     option.length && option.map((opt, index) => {

@@ -6,6 +6,7 @@ import Ask from "./(components)/ask/page";
 import Footer from "./(components)/tools/footer";
 import Link from "next/link";
 import How from "./(components)/section/how";
+import { Suspense } from "react";
 
 
 export default function Home() {
@@ -23,9 +24,9 @@ export default function Home() {
               src="/images/recrutment.png" alt="test" width={720} height={720} priority />
             <h1 className=" font-semibold text-lg">Recruitment</h1>
             <p className="w-2/3 text-center line-clamp-3">
-            Streamline the recruitment process with asynchronous interviews, easy scheduling, and tagging.
+              Streamline the recruitment process with asynchronous interviews, easy scheduling, and tagging.
             </p>
-            <div className="flex justify-center items-center px-4 py-3 rounded-full bg-[#dedede] w-1/2">
+            <div className="flex justify-center items-center px-4 py-3 rounded-full bg-[#dedede] w-max">
               <span className=" text-lg px-3 py-2">Learn more</span>
             </div>
           </div>
@@ -38,7 +39,7 @@ export default function Home() {
             <p className="w-2/3 text-center line-clamp-3 ">
               Establish a bond with your audience from the get-go. VideoAsk lets you gather contact info and capture leads with ease.
             </p>
-            <div className="flex justify-center items-center px-4 py-3 rounded-full bg-[#dedede] w-1/2">
+            <div className="flex justify-center items-center px-4 py-3 rounded-full bg-[#dedede] w-max">
               <span className=" text-lg px-3 py-2">Learn more</span>
             </div>
           </div>
@@ -51,7 +52,7 @@ export default function Home() {
             <p className="w-2/3 text-center line-clamp-3">
               One tool, endless possibilities—use VideoAsk for research and feedback, training, and customer support.
             </p>
-            <div className="flex justify-center items-center px-4 py-3 rounded-full bg-[#dedede] w-1/2">
+            <div className="flex justify-center items-center px-4 py-3 rounded-full bg-[#dedede] w-max">
               <span className=" text-lg px-3 py-2">Learn more</span>
             </div>
           </div>
@@ -61,19 +62,13 @@ export default function Home() {
       <div className=" w-full flex justify-center items-center my-2">
         <p className=" w-full md:w-1/2 text-2xl text-center">Scale your high touch communication with asynchronous, interactive video</p>
       </div>
-      <div className="w-full justify-center flex flex-col gap-2 h-full">
+      <div className="w-full justify-center flex flex-col gap-1 h-full mb-3">
         <h1 className=" ml-[5%] text-2xl font-semibold text-black border-l-4 border-black px-2 my-3 animate-fade-right animate-once animate-duration-[3000ms] animate-ease-in">Watch a Demo</h1>
         <Ask />
-
         <div className=" w-full flex justify-center items-center animate-fade animate-once animate-duration-[2000ms] animate-ease-in-out">
           <Link href='/create' className=" w-max px-2 py-3 text-white bg-black rounded-full font-semibold hover:text-black hover:bg-white hover:outline outline-black">Create videoAsk</Link>
         </div>
       </div>
-      <div className="w-full justify-center flex flex-col gap-2 h-full items-center animate-once animate-duration-[3000ms] animate-ease-in">
-      <h1 className="text-2xl font-semibold text-black border-l-4 border-black px-2 my-3 animate-fade-right animate-once animate-duration-[3000ms] animate-ease-in flex justify-start w-full ml-[10%]">How?</h1>
-        <Image src="/images/details.png" alt="test" width={720} height={720} priority className=" w-[90%] h-full " />
-      </div>
-
       <How />
       <Footer />
     </main>

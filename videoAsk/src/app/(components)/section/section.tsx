@@ -7,8 +7,8 @@ const Section = () => {
             <div className=" flex flex-col justify-center gap-3 md:w-1/2 w-[90%] mx-auto">
                 <h1 className=" text-3xl md:text-5xl justify-center items-center flex w-[90%] mx-auto my-2 line-clamp-3 animate-fade-down animate-once animate-delay-500 animate-ease-linear">Get face to face with interactive video</h1>
                 <p className="md:text-xl w-[90%] mx-auto my-2 justify-center items-center flex font-light animate-fade-down animate-once animate-delay-500 animate-ease-linear">VideoAsk helps you streamline your conversations and build business relationships at scale.</p>
-                <Link href='/example' className=" bg-black text-white text-2xl md:text:xl rounded-full flex gap-1 justify-center items-center px-3 md:px-6 py-4 md:py-5 md:text-xl md:w-max w-full  mx-auto md:mx-7 my-2 animate-fade-down animate-once animate-delay-500 animate-ease-linear cursor-pointer hover:bg-opacity-45">
-                    <span className=" w-full px-2 flex gap-1 justify-center  items-center ">Start for free <Image src="/icons/arrow-icon.svg" alt="arrow-right" width={20} height={20} /></span>
+                <Link href='/example' className=" bg-black text-white text-2xl md:text:xl rounded-full flex gap-1 justify-center items-center px-3 md:px-6 py-4 md:py-5 md:text-xl w-max mx-auto md:mx-7 my-2 animate-fade-down animate-once animate-delay-500 animate-ease-linear cursor-pointer hover:bg-opacity-45">
+                    <span className=" w-max px-2 flex gap-1 justify-center  items-center ">Start for free <Image src="/icons/arrow-icon.svg" alt="arrow-right" width={20} height={20} /></span>
                 </Link>
                 <span className=" w-full text-center font-light text-[#3636369f] animate-fade-down animate-once animate-delay-500 animate-ease-linear">✌️ No credit card required.</span>
             </div>

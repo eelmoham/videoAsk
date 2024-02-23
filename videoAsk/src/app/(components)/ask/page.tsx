@@ -14,50 +14,36 @@ interface Option {
 
 const Ask = () => {
     const videos: Video = {
-        url: "https://www.youtube.com/watch?v=mPymRFeTJa4",
+        url: "https://res.cloudinary.com/drqxjhddm/video/upload/v1708707127/videoAsk/dog%20vs%20cat.mp4",
         options: [
             {
-                text: "Dolly",
+                text: "you like Dogs?",
                 vidio: {
-                    url: "https://youtu.be/H6guS2OR_TY?si=-3mt5iZt7vSeaHxP",
+                    url: "https://res.cloudinary.com/drqxjhddm/video/upload/v1708707127/videoAsk/funy%20dog.mp4",
                     options: [
                         {
-                            text: "7liwa",
+                            text: "black dog",
                             vidio: {
-                                url: "https://www.youtube.com/watch?v=7ZHfD4NfgHU",
+                                url: "https://res.cloudinary.com/drqxjhddm/video/upload/v1708708206/videoAsk/black-dog.mp4",
                                 options: [
                                     {
-                                        text: "relax",
-                                        vidio: {
-                                            url: "https://www.youtube.com/watch?v=oVzt0ZwIC84",
-                                            options: [
-                                                {
-                                                    text: null,
-                                                    vidio: null
-                                                },]
-                                        }
-                                    }
-                                    ,
+                                        text: "null",
+                                        vidio: null
+                                    },
+                                ]
+                            
+                            }
+                        }
+                        ,
+                        {
+                            text: "white dog",
+                            vidio: {
+                                url: "https://res.cloudinary.com/drqxjhddm/video/upload/v1708708206/videoAsk/white-dog.mp4",
+                                options: [
                                     {
-                                        text: "random",
-                                        vidio: {
-                                            url: "https://youtu.be/B4SX5FFE2XE?si=gZxq4NxgXJlZehiZ",
-                                            options: [
-                                                {
-                                                    text: "congratulations",
-                                                    vidio: {
-                                                        url: "https://youtu.be/SC4xMk98Pdc?si=TWV3bU1OLeRIpj_P",
-                                                        options: [
-                                                            {
-                                                                text: "null",
-                                                                vidio: null
-                                                            },]
-                                                    }
-                                                }
-                                            ]
-                                        }
-                                    }
-
+                                        text: "null",
+                                        vidio: null
+                                    },
                                 ]
                             }
                         }
@@ -66,19 +52,32 @@ const Ask = () => {
             }
             ,
             {
-                text: "random",
+                text: "you like Cats?",
                 vidio: {
-                    url: "https://youtu.be/B4SX5FFE2XE?si=gZxq4NxgXJlZehiZ",
+                    url: "https://res.cloudinary.com/drqxjhddm/video/upload/v1708707127/videoAsk/cats.mp4",
                     options: [
                         {
-                            text: "7liwa",
+                            text: "black cat",
                             vidio: {
-                                url: "https://www.youtube.com/watch?v=7ZHfD4NfgHU",
+                                url: "https://res.cloudinary.com/drqxjhddm/video/upload/v1708708205/videoAsk/black-cat.mp4",
                                 options: [
                                     {
                                         text: "null",
                                         vidio: null
                                     },]
+                            }
+                            
+                        },
+                        {
+                            text: "white cat",
+                            vidio: {
+                                url: "https://res.cloudinary.com/drqxjhddm/video/upload/v1708708205/videoAsk/white-cat.mp4",
+                                options: [
+                                    {
+                                        text: "null",
+                                        vidio: null
+                                    },
+                                ]
                             }
                         }
                     ]
@@ -97,7 +96,7 @@ const Ask = () => {
 
 
     return (
-        <div className=" m-auto w-[90%] h-[500px] flex flex-col justify-center items-center animate-fade-up animate-duration-[2000ms] animate-ease-out rounded-xl">
+        <div className=" m-auto w-full h-[600px] flex flex-col justify-center items-center animate-fade-up animate-duration-[2000ms] animate-ease-out rounded-xl">
             <Player url={url} options={optionss} setUrl={nextNode} />
         </div>
     );

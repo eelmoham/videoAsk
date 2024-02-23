@@ -27,14 +27,14 @@ const Create = () => {
         }
     }, [context]);
     return (
-        <div className=' flex w-full h-full flex-1 flex-col justify-center items-center'>
+        <div className=' flex w-full h-full flex-1 flex-col gap-2 justify-center items-center'>
             <h1 className=' text-3xl font-bold text-purple-500'>Coming soon</h1>
             <Link href='/'
                 className=' text-purple-500 px-3 py-2 shadow-slate-400 outline-purple-500 outline rounded-full hover:bg-purple-500 hover:text-white'>Go Home
             </Link>
-            <div className=' flex-1 flex'>
+            {/* <div className=' flex-1 flex'>
                 <Video />
-            </div>
+            </div> */}
             
         </div>
     );
