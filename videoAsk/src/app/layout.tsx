@@ -18,8 +18,8 @@ export default function RootLayout({
   return (
     <html lang="en">
 
-      <body className={inter.className + 'py-3 px-2'}>
-        <div className="flex min-h-screen flex-col items-center relative mx-3 lg:container lg:m-auto">
+      <body className={inter.className + ''}>
+        <div className="flex min-h-screen flex-col items-center relative">
           <AuthProvider>
               {children}
           </AuthProvider>

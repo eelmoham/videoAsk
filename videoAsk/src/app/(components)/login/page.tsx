@@ -1,13 +1,11 @@
 'use client'
 import Image from "next/image"
 import Link from "next/link"
-import { Suspense, useContext, useState } from "react"
+import { useContext, useState } from "react"
 import Input from "../tools/Input"
 import axios from "axios"
 import { AuthContext } from "../tools/authContext"
 import { useRouter } from "next/navigation"
-import Loading from "../tools/Loading"
-
 const Login = () => {
   const context = useContext(AuthContext);
   const [email, setEmail] = useState()

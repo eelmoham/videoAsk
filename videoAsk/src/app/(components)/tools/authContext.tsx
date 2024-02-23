@@ -1,6 +1,7 @@
 // AuthContext.tsx
 'use client'
 import axios from 'axios';
+import { useRouter } from 'next/navigation';
 import React, { createContext, useState, useContext, FC, ReactNode, useEffect } from 'react';
 
 interface AuthContextType {
@@ -17,7 +18,7 @@ interface AuthProviderProps {
 
 export const AuthProvider: FC<AuthProviderProps> = ({ children }) => {
   const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
-
+  const router = useRouter();
   const login = () => {
     setIsLoggedIn(true);
   };
@@ -35,6 +36,7 @@ export const AuthProvider: FC<AuthProviderProps> = ({ children }) => {
     axios.get('http://localhost:5000/auth/authenticated').then((response) => {
       if (response.status === 200) {
         setIsLoggedIn(true)
+        router.push('/create')
       }
     }).catch((error) => {
       setIsLoggedIn(false)
