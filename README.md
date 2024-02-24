@@ -21,12 +21,12 @@ To run this project, you need to have the following installed on your system:
 2. Run Docker Compose to build and start the services:
 
     ```bash
-    docker-compose up --build
+    docker-compose up --build -d
     ```
 
 3. Once the containers are up and running, you can access the client (VideoAsk) at [http://localhost:3000](http://localhost:3000) and the server at [http://localhost:5000](http://localhost:5000).
 
-4. To stop the services, use `Ctrl + C`, and then run:
+4. To stop the services, run:
 
     ```bash
     docker-compose down
