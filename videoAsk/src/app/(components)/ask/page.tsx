@@ -14,7 +14,7 @@ interface Option {
 
 const Ask = () => {
     const videos: Video = {
-        url: "https://res.cloudinary.com/drqxjhddm/video/upload/v1708707127/videoAsk/dog%20vs%20cat.mp4",
+        url: "https://res.cloudinary.com/drqxjhddm/video/upload/v1708707127/videoAsk/dog%20vs%20cat.mp4", //intro
         options: [
             {
                 text: "you like Dogs?",

@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  server:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    container_name: expressjs
+    ports:
+      - "5000:5000"
+
+  client:
+    build:
+      context: ./videoAsk
+      dockerfile: Dockerfile
+    container_name: videoAsk
+    ports:
+      - "3000:3000"
+    depends_on:
+      - server

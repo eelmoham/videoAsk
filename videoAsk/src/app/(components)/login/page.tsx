@@ -21,8 +21,8 @@ const Login = () => {
     }).then((response) => {
       if (response.status === 200) {
         context?.login()
-        setLoading(false)
         router.push('/')
+        setLoading(false)
       }
     }).catch((error) => {
       setLoading(false)

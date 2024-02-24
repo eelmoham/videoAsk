@@ -12,7 +12,7 @@ import { Suspense } from "react";
 export default function Home() {
 
   return (
-    <main className="flex h-full flex-col gap-1 mx-3 lg:container lg:m-auto px-2 py-3">
+    <main className="flex h-full flex-col gap-1 mx-3 lg:container lg:m-auto px-3">
       <NavBar />
       <Section />
       <h1 className=" w-full text-center font-light opacity-45"> +10k bla bla bla bla ...</h1>

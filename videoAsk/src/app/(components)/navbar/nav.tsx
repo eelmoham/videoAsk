@@ -19,10 +19,10 @@ const NavBar = () => {
         return (<Loading />);
     return (
         <div className=" w-full flex justify-between sticky top-0 items-center select-none bg-[#ffffff] h-20 px-1 py-2 z-50 animate-fade-down animate-once animate-ease-linear">
-            <a href='/' className="flex justify-center items-center gap-1 cursor-pointer hover:opacity-50">
+            <Link href='/' className="flex justify-center items-center gap-1 cursor-pointer hover:opacity-50">
                 <Image src="/icons/videoPlay.svg" alt="circle icon for play video" width={37} height={37} priority />
                 <span className=" text-xl font-bold">Ask</span>
-            </a>
+            </Link>
             <div className=" hidden md:flex">
                 <Pages />
             </div>
